@@ -19,13 +19,11 @@ jobs:
       - name: Download SDKs
         run: |
           mv -v $THEOS/sdks $THEOS/sdks2
-          echo git clone --depth 1 https://github.com/xybp888/iOS-SDKs.git $THEOS/sdks
+          git clone --depth 1 https://github.com/xybp888/iOS-SDKs.git $THEOS/sdks
 
       - name: Select Xcode
         run: |
-          ls -lah /Applications/
-          exit 1
-          sudo xcode-select -s /Applications/Xcode_15.4.app/Contents/Developer
+          sudo xcode-select -s /Applications/Xcode_16.app/Contents/Developer
           xcodebuild -version
 
       - name: Build the tweak
