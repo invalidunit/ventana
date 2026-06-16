@@ -1,4 +1,4 @@
-TARGET = iphone:latest:7.0
+TARGET = iphone:14.5:7.0
 ARCHS = arm64
 
 include $(THEOS)/makefiles/common.mk
