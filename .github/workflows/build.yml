@@ -18,6 +18,7 @@ jobs:
 
       - name: Download SDKs
         run: |
+          mv -v $THEOS/sdks $THEOS/sdks2
           git clone --depth 1 https://github.com/xybp888/iOS-SDKs.git $THEOS/sdks
 
       - name: Build the tweak
